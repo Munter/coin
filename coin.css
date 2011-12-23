@@ -12,12 +12,12 @@ html, body {
 body {
     background-image: -webkit-linear-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%),
                       -webkit-linear-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%);
-    background-image:    -webkit-moz-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%),
-                         -webkit-moz-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%);
-    background-image:      -webkit-o-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%),
-                           -webkit-o-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%);
-    background-image:     -webkit-ms-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%),
-                          -webkit-ms-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%);
+    background-image:    -moz-linear-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%),
+                         -moz-linear-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%);
+    background-image:      -o-linear-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%),
+                           -o-linear-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%);
+    background-image:     -ms-linear-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%),
+                          -ms-linear-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%);
     background-size: 4px 4px;
     background-position: 0 0, 2px 2px;
 }
