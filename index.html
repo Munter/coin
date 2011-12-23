@@ -22,38 +22,50 @@
         <script type="text/javascript" src="coin.js"></script>
         <script type="text/javascript" src="nav.js"></script>
         <script type="text/javascript">
-var start = parseInt(location.href.split('#')[1], 10) || Math.round(Math.random() * 0xFFFF),
-    coin = new Coin(start),
-    prev = function() {
-        coin.prev();
-        location.hash = coin.getValue();
-    },
-    next = function () {
-        coin.next();
-        location.hash = coin.getValue();
-    },
-    navLinks = document.getElementById('nav').getElementsByTagName('a');
+            var start = parseInt(location.href.split('#')[1], 10) || Math.round(Math.random() * 0xFFFF),
+                coin = new Coin(start),
+                prev = function() {
+                    coin.prev();
+                    location.hash = coin.getValue();
+                },
+                next = function () {
+                    coin.next();
+                    location.hash = coin.getValue();
+                },
+                navLinks = document.getElementById('nav').getElementsByTagName('a');
 
-new KeyNav(document.body, {
-   'left': prev,
-   'right': next,
-   'space': next,
-   'enter': next
-});
-navLinks[0].onmousedown = prev;
-navLinks[1].onmousedown = next;
-navLinks[0].onclick = navLinks[1].onclick = function (e) {
-    return false;
-};
-setInterval(function () {
-    var hash = location.href.split('#')[1];
-    var int = hash && parseInt(hash, 10);
-    if (!isNaN(int) && int !== coin.getValue()) {
-        coin.setValue(int);
-    }
-}, 100);
+            new KeyNav(document.body, {
+               'left': prev,
+               'right': next,
+               'space': next,
+               'enter': next
+            });
+            navLinks[0].onmousedown = prev;
+            navLinks[1].onmousedown = next;
+            navLinks[0].onclick = navLinks[1].onclick = function (e) {
+                return false;
+            };
+            setInterval(function () {
+                var hash = location.href.split('#')[1];
+                var int = hash && parseInt(hash, 10);
+                if (!isNaN(int) && int !== coin.getValue()) {
+                    coin.setValue(int);
+                }
+            }, 100);
 
-document.getElementById('coin').appendChild(coin.getTable());
+            document.getElementById('coin').appendChild(coin.getTable());
+        </script>
+
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-929912-1']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
         </script>
     </body>
 <body>
