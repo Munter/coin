@@ -25,6 +25,7 @@ body {
 #page {
     width: 320px;
     margin: 0 auto;
+    padding-bottom: 2em;
 }
 
 h1, h2, a {
@@ -81,7 +82,7 @@ h2 {
 
 #coin table {
     border-collapse: collapse;
-    margin: 4em auto;
+    margin: 2em auto;
 }
 
 #coin td {
