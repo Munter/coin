@@ -48,10 +48,8 @@ navLinks[0].onclick = navLinks[1].onclick = function (e) {
 setInterval(function () {
     var hash = location.href.split('#')[1];
     var int = hash && parseInt(hash, 10);
-    if (int && int !== coin.getValue()) {
+    if (!isNaN(int) && int !== coin.getValue()) {
         coin.setValue(int);
-    } else {
-        location.hash = coin.getValue();
     }
 }, 100);
 

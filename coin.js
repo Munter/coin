@@ -74,7 +74,7 @@ Coin.prototype = {
     },
 
     setValue: function (value) {
-        var n = 0xFFFF;
+        var n = 0xFFFF + 1;
         this.value = (n + (value % n)) % n;
         this.updateTable(this.value);
     },
