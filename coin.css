@@ -1,0 +1,90 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    background-image: -webkit-linear-gradient(top, #ffea00, #ff6a00);
+    background-image:    -moz-linear-gradient(top, #ffea00, #ff6a00);
+    background-image:      -o-linear-gradient(top, #ffea00, #ff6a00);
+    background-image:     -ms-linear-gradient(top, #ffea00, #ff6a00);
+}
+
+body {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%),
+                      -webkit-linear-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%);
+    background-image:    -webkit-moz-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%),
+                         -webkit-moz-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%);
+    background-image:      -webkit-o-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%),
+                           -webkit-o-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%);
+    background-image:     -webkit-ms-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%),
+                          -webkit-ms-gradient(45deg, rgba(255, 0, 0, 0.15) 25%, transparent 25%, transparent 75%, rgba(255, 0, 0, 0.15) 75%);
+    background-size: 4px 4px;
+    background-position: 0 0, 2px 2px;
+}
+
+#page {
+    width: 320px;
+    margin: 0 auto;
+}
+
+h1, h2, a {
+    font-family: helvetica, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    padding-top: 40px;
+    font-size: 300%;
+    margin: 0;
+    color: #FF3300;
+    text-shadow: #633 1px 2px 0;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 200%;
+    color: #FF2200;
+}
+
+#nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#nav .prev {
+    float: left;
+}
+
+#nav .next {
+    float: right;
+}
+
+#nav a {
+    font-weight: bold;
+    color: red;
+    text-decoration: none;
+}
+
+#nav a:hover {
+    text-shadow: rgba(100, 30, 0, 0.5) 0px 0px 1px;
+}
+
+#nav .prev a:before {
+    content: "⇦";
+}
+
+#nav .next a:after {
+    content: "⇨";
+}
+
+#coin table {
+    border-collapse: collapse;
+    margin: 4em auto;
+}
+
+#coin td {
+    width: 12px;
+    height: 12px;
+}

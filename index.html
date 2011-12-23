@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Her er en coin</title>
+        <link rel="stylesheet" type="text/css" href="coin.css">
+    </head>
+
+    <body>
+
+        <div id="page">
+            <h1>Her er en coin</h1>
+            <h2>Til coinoffers</h2>
+            <ul id="nav">
+                <li class="prev"><a href="#">Forrige</a></li>
+                <li class="next"><a href="#">Næste</a></li>
+            </ul>
+            <div id="coin"></div>
+        </div>
+
+        <script type="text/javascript" src="coin.js"></script>
+        <script type="text/javascript" src="nav.js"></script>
+        <script type="text/javascript">
+var start = parseInt(location.href.split('#')[1], 10) || Math.round(Math.random() * 0xFFFF),
+    coin = new Coin(start),
+    prev = function() {
+        coin.prev();
+        location.hash = coin.getValue();
+    },
+    next = function () {
+        coin.next();
+        location.hash = coin.getValue();
+    },
+    navLinks = document.getElementById('nav').getElementsByTagName('a');
+
+new KeyNav(document.body, {
+   'left': prev,
+   'right': next,
+   'space': next,
+   'enter': next
+});
+navLinks[0].onmousedown = prev;
+navLinks[1].onmousedown = next;
+navLinks[0].onclick = navLinks[1].onclick = function (e) {
+    return false;
+};
+setInterval(function () {
+    var hash = location.href.split('#')[1];
+    var int = hash && parseInt(hash, 10);
+    if (int && int !== coin.getValue()) {
+        coin.setValue(int);
+    } else {
+        location.hash = coin.getValue();
+    }
+}, 100);
+
+document.getElementById('coin').appendChild(coin.getTable());
+        </script>
+    </body>
+<body>
